@@ -1,4 +1,37 @@
 {
+  "profile": {
+    "id": 1,
+    "name": "James Lee",
+    "picture": "profile.png",
+    "role": "Web App Developer",
+    "location": "San Francisco, US",
+    "email": "jameslee@website.com",
+    "website": "http://www.website.com",
+    "socialmedia": [],
+    "skills": [
+      {
+        "id": 1,
+        "name": "Python & Django",
+        "level": 9
+      },
+      {
+        "id": 2,
+        "name": "Javascript & Jquery",
+        "level": 9
+      },
+      {
+        "id": 3,
+        "name": "HTML5, CSS3, SASS & LESS",
+        "level": 9
+      },
+      {
+        "id": 4,
+        "name": "Ruby on Rails",
+        "level": 8
+      }
+    ],
+    "aboutme": "Write a brief intro about yourself. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sapien quis arcu aliquet commodo. Sed id metus eu enim rhoncus ultricies ac at diam. Vestibulum laoreet, eros a semper ornare, dui diam venenatis ante, vel placerat libero nisl eget justo. Praesent consectetur urna et elit vestibulum tristique.\nIt's a good idea to include your personal interests and hobbies as well. Nullam sed fringilla turpis. Maecenas ut orci neque. Donec non libero pulvinar, semper erat vitae, bibendum tellus. Suspendisse eu orci sed metus facilisis vehicula a et dui. Nullam eu sollicitudin diam. Fusce pharetra felis id urna rhoncus gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam ultrices, diam sit amet faucibus pellentesque, risus purus vulputate lectus, id euismod arcu velit et est. In vitae tortor vitae est pretium blandit nec vel sapien."
+  },
   "projects": [
     {
       "id": 1,
