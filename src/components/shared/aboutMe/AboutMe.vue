@@ -1,9 +1,13 @@
 <template>
-  <section>About Me</section>
+  <section>
+    <h2>About Me</h2>
+    <div>{{ text }}</div>
+  </section>
 </template>
 
 <script>
 export default {
+  props: ['text'],
 }
 </script>
 

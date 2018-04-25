@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <ProfileHeader/>
+    <ProfileHeader :data="profile"/>
     <main>
-      <AboutMe/>
+      <AboutMe :text="profile.aboutme"/>
       <section id="projects">
         Latest Projects
         <ul>
@@ -31,6 +31,30 @@ export default {
     Project,
     ContactInfo,
     Skills,
+  },
+  data () {
+    return {
+      profile: {},
+      projects: [],
+    }
+  },
+  created () {
+    this.loadProfile()
+    this.loadProjects()
+  },
+  methods: {
+    loadProfile () {
+      this.$http.get('http://localhost:3000/profile')
+        .then(response => response.json())
+        .then(profileData => { this.profile = profileData },
+          err => console.log(err))
+    },
+    loadProjects () {
+      this.$http.get('http://localhost:3000/projects')
+        .then(response => response.json())
+        .then(projectsData => { this.projects = projectsData },
+          err => console.log(err))
+    },
   },
 }
 </script>
