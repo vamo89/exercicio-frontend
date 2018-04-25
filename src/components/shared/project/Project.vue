@@ -1,26 +1,40 @@
 <template>
-  <div>
-    <project>
-      <img />
-      <title />
-      <description />
-      <link />
-    </project>
-
-    <project featured>
-      <title />
-      <subtitle />
-      <img big />
-      <description />
-      <link button />
-    </project>
-  </div>
+  <section class="project" :featured="featured" >
+    <div>{{ project.title }}</div>
+    <div>{{ project.subtitle }}</div>
+    <img :src="imgSrc" />
+    <div>{{ project.description }}</div>
+    <a :href="url">Find out more</a>
+    <button :link="url">Back My Project</button>
+  </section>
 </template>
 
 <script>
 export default {
+  props: ['project', 'featured'],
+  computed: {
+    imgSrc: function () {
+      return `/static/${this.project.picture}`
+    }
+  }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+section.project:not([featured]) {
+  display: grid;
+  justify-items: center;
+
+  img {
+    order: -1;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+section.project[featured] a {
+  display: none;
+}
 </style>

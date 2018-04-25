@@ -6,8 +6,8 @@
       <section id="projects">
         Latest Projects
         <ul>
-          <li v-for="project in projects" :key="project.id">
-            <Project :project="project" />
+          <li v-for="(project, index) in projects" :key="project.id">
+            <Project :project="project" :featured="index === 0" />
           </li>
         </ul>
       </section>
