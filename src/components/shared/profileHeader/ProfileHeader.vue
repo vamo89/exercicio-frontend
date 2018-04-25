@@ -5,14 +5,14 @@
       <div>{{ data.name }}</div>
       <div>{{ data.role }}</div>
       <nav>
-        <a>twitter</a>
-        <a>google+</a>
-        <a>ankedIn</a>
-        <a>github</a>
-        <a>yahoo?</a>
+        <a><icon name="brands/twitter"/></a>
+        <a><icon name="brands/google-plus"/></a>
+        <a><icon name="brands/linkedin"/></a>
+        <a><icon name="brands/github-alt"/></a>
+        <a><icon name="brands/yoast"/></a>
       </nav>
     </section>
-    <button>Contact Me</button>
+    <button><icon name="regular/paper-plane"/>Contact Me</button>
   </header>
 </template>
 

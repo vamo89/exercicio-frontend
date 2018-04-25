@@ -5,9 +5,18 @@ import Icon from 'vue-awesome/components/Icon'
 import App from './App.vue'
 import '../static/css/reset.css'
 
-// Importing all icons
-// TODO: change that to import only the ones in use
-import 'vue-awesome/icons'
+// Importing icons in use
+import 'vue-awesome/icons/map-marker'
+import 'vue-awesome/icons/regular/envelope'
+import 'vue-awesome/icons/link'
+import 'vue-awesome/icons/brands/twitter'
+import 'vue-awesome/icons/brands/google-plus'
+import 'vue-awesome/icons/brands/linkedin'
+import 'vue-awesome/icons/brands/github-alt'
+import 'vue-awesome/icons/brands/yoast'
+import 'vue-awesome/icons/regular/paper-plane'
+import 'vue-awesome/icons/external-link-alt'
+import 'vue-awesome/icons/regular/thumbs-up'
 
 Vue.component('icon', Icon)
 Vue.use(VueResource)

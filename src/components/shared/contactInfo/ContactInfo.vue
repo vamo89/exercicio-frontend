@@ -1,8 +1,8 @@
 <template>
   <section>
-    {{ info.location }}
-    {{ info.email }}
-    {{ info.website }}
+    <icon name="map-marker"/>{{ info.location }}
+    <icon name="regular/envelope"/>{{ info.email }}
+    <icon name="link"/>{{ info.website }}
   </section>
 </template>
 
