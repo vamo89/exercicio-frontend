@@ -1,53 +1,37 @@
 <template>
   <div id="app">
-    <header>
-      <profilePic />
-      <info>
-        <name/>
-        <title/>
-        <social>
-          <ul>
-            <li>twitter</li>
-            <li>google+</li>
-            <li>linkedIn</li>
-            <li>github</li>
-            <li>yahoo?</li>
-          </ul>
-        </social>
-      </info>
-      <contact-btn/>
-    </header>
+    <ProfileHeader/>
     <main>
-      <about-me/>
-      <projets>
+      <AboutMe/>
+      <section id="projects">
         Latest Projects
         <ul>
-          <li repeat="projects">
-            <project>
-              <img />
-              <title />
-              <description />
-              <link />
-            </project>
-
-            <project featured>
-              <title />
-              <subtitle />
-              <img big />
-              <description />
-              <link button />
-            </project>
+          <li v-for="project in projects" :key="project.id">
+            <Project :project="project" />
           </li>
         </ul>
-      </projets>
-      <info/>
-      <skills/>
+      </section>
+      <ContactInfo/>
+      <Skills/>
     </main>
   </div>
 </template>
 
 <script>
+import ProfileHeader from './components/shared/profileHeader/ProfileHeader'
+import AboutMe from './components/shared/aboutMe/AboutMe'
+import Project from './components/shared/project/Project'
+import ContactInfo from './components/shared/contactInfo/ContactInfo'
+import Skills from './components/shared/skills/Skills'
+
 export default {
+  components: {
+    ProfileHeader,
+    AboutMe,
+    Project,
+    ContactInfo,
+    Skills,
+  },
 }
 </script>
 
