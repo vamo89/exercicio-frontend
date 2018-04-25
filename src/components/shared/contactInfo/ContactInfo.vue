@@ -1,9 +1,14 @@
 <template>
-  <section>Contact Info</section>
+  <section>
+    {{ info.location }}
+    {{ info.email }}
+    {{ info.website }}
+  </section>
 </template>
 
 <script>
 export default {
+  props: ['info'],
 }
 </script>
 

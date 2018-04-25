@@ -11,8 +11,8 @@
           </li>
         </ul>
       </section>
-      <ContactInfo/>
-      <Skills/>
+      <ContactInfo :info="profile"/>
+      <Skills :skills="profile.skills" />
     </main>
   </div>
 </template>
