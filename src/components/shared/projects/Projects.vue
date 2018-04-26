@@ -1,6 +1,6 @@
 <template>
   <section>
-    Latest Projects
+    <div class="title">Latest Projects</div>
     <ul>
       <li v-for="(project, index) in projects" :key="project.id">
         <Project :project="project" :featured="index === 0" />
@@ -25,5 +25,10 @@ export default {
 
 section {
   background-color: $section-background-color;
+
+  .title {
+    color: $section-title-color;
+    font: $section-title-font;
+  }
 }
 </style>
