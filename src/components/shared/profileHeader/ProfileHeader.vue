@@ -42,20 +42,20 @@ header {
     margin: 15px;
   }
 
- .name {
-    color: $header-title-color;
-    font: $header-title-font;
-  }
-
-  .role {
-    color: $header-subtitle-color;
-    font: $header-subtitle-font;
-  }
-
   .info {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .name {
+      color: $header-title-color;
+      font: $header-title-font;
+    }
+
+    .role {
+      color: $header-subtitle-color;
+      font: $header-subtitle-font;
+    }
 
     nav figure {
       margin: 5px;
@@ -85,6 +85,25 @@ header {
     padding: 5px;
     border-radius: 5px;
     border: solid 7px $header-button-color;
+  }
+}
+
+@media (min-width: $break-mobile) {
+  header {
+    flex-direction: row;
+    padding: 0 50px;
+
+    .info {
+      align-items: start;
+
+      figure:first-child {
+        margin-left: 0;
+      }
+    }
+
+    button {
+      margin-left: auto;
+    }
   }
 }
 
