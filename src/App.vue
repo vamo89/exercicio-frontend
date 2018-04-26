@@ -59,6 +59,10 @@ export default {
 div#app {
   background-color: $app-background-color;
 
+  main > * {
+    margin: 50px 50px 0px 50px;
+  }
+
   a {
     color: $link-color;
     text-decoration: none;

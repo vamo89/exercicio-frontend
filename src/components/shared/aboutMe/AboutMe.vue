@@ -16,10 +16,12 @@ export default {
 
 section {
   background-color: $section-background-color;
+  padding: 20px;
 
   .title {
     color: $section-title-color;
     font: $section-title-font;
+    margin-bottom: 20px;
   }
 
   .text {

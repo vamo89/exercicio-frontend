@@ -18,9 +18,17 @@ export default {
 section {
   background-color: $section-background-color;
   font: $text-font;
+  padding: 20px;
+
+  > * {
+    margin: 12px;
+  }
 
   .icon {
     color: $icon-color;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
   }
 }
 </style>
