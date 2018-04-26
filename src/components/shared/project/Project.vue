@@ -4,8 +4,8 @@
     <div class="subtitle">{{ project.subtitle }}</div>
     <img :src="imgSrc" />
     <div class="text">{{ project.description }}</div>
-    <a :href="project.url"><icon name="external-link-alt"/>Find out more</a>
-    <button :link="project.url"><icon name="regular/thumbs-up"/>Back My Project</button>
+    <a :href="project.url"><icon class="icon" name="external-link-alt"/>Find out more</a>
+    <button :link="project.url"><icon class="icon" name="regular/thumbs-up"/>Back My Project</button>
   </section>
 </template>
 

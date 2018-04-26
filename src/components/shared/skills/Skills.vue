@@ -9,7 +9,7 @@
         <div class="bar"><span class="bar-fill" :style="{ width: skillLevelToPercentage(skill.level) }"></span></div>
       </div>
     </div>
-    <a><icon name="external-link-alt"/>More on Coderwall</a>
+    <a><icon class="icon" name="external-link-alt"/>More on Coderwall</a>
   </section>
 </template>
 

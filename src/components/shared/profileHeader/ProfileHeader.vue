@@ -5,11 +5,11 @@
       <div class="name">{{ data.name }}</div>
       <div class="role">{{ data.role }}</div>
       <nav>
-        <a><figure><icon scale="1.3" name="brands/twitter"/></icon></figure></a>
-        <a><figure><icon scale="1.3" name="brands/google-plus-g"/></icon></figure></a>
-        <a><figure><icon scale="1.3" name="brands/linkedin-in"/></icon></figure></a>
-        <a><figure><icon scale="1.3" name="brands/github-alt"/></icon></figure></a>
-        <a><figure><icon scale="1.3" name="brands/yoast"/></icon></figure></a>
+        <a><figure><icon class="social-media-icon" scale="1.3" name="brands/twitter"/></icon></figure></a>
+        <a><figure><icon class="social-media-icon" scale="1.3" name="brands/google-plus-g"/></icon></figure></a>
+        <a><figure><icon class="social-media-icon" scale="1.3" name="brands/linkedin-in"/></icon></figure></a>
+        <a><figure><icon class="social-media-icon" scale="1.3" name="brands/github-alt"/></icon></figure></a>
+        <a><figure><icon class="social-media-icon" scale="1.3" name="brands/yoast"/></icon></figure></a>
       </nav>
     </section>
     <button><icon class="icon" scale="0.8" name="paper-plane"/>Contact Me</button>
@@ -68,7 +68,7 @@ header {
       width: 40px;
       color: white;
 
-      svg {
+      .social-media-icon {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -76,7 +76,6 @@ header {
       }
     }
   }
-
 
   button {
     color: white;
@@ -86,12 +85,6 @@ header {
     padding: 5px;
     border-radius: 5px;
     border: solid 7px $header-button-color;
-
-    .icon {
-      padding-right: 5px;
-      position: relative;
-      top: 2px;
-    }
   }
 }
 

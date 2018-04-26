@@ -2,10 +2,14 @@
   <div id="app">
     <ProfileHeader :data="profile"/>
     <main>
-      <AboutMe :text="profile.aboutme"/>
-      <Projects :projects="projects"/>
-      <ContactInfo :info="profile"/>
-      <Skills :skills="profile.skills" :skillIntro="profile.skillIntro" />
+      <div class="column">
+        <AboutMe :text="profile.aboutme"/>
+        <Projects :projects="projects"/>
+      </div>
+      <div class="column">
+        <ContactInfo :info="profile"/>
+        <Skills :skills="profile.skills" :skillIntro="profile.skillIntro" />
+      </div>
     </main>
   </div>
 </template>
@@ -60,13 +64,31 @@ div#app {
   background-color: $app-background-color;
   padding-bottom: 50px;
 
-  main > * {
+  main .column > * {
     margin: 50px 50px 0px 50px;
   }
 
   a {
     color: $link-color;
     text-decoration: none;
+  }
+
+  .icon {
+    padding-right: 5px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+@media (min-width: $break-mobile) {
+  div#app main {
+    display: grid;
+    grid-template-columns: auto minmax(300px, 35%);
+    padding: 0 30px;
+
+    .column > * {
+      margin: 50px 15px 0px 15px;
+    }
   }
 }
 </style>
