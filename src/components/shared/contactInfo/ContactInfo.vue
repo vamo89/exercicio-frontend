@@ -1,8 +1,8 @@
 <template>
   <section>
-    <icon name="map-marker"/>{{ info.location }}
-    <icon name="regular/envelope"/>{{ info.email }}
-    <icon name="link"/>{{ info.website }}
+    <div><icon class="icon" name="map-marker"/>{{ info.location }}</div>
+    <div><icon class="icon" name="regular/envelope"/><a>{{ info.email }}</a></div>
+    <div><icon class="icon" name="link"/><a>{{ info.website }}</a></div>
   </section>
 </template>
 
@@ -12,5 +12,15 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../../../assets/constants';
+
+section {
+  background-color: $section-background-color;
+  font: $text-font;
+
+  .icon {
+    color: $icon-color;
+  }
+}
 </style>

@@ -8,6 +8,7 @@
     "email": "jameslee@website.com",
     "website": "http://www.website.com",
     "socialmedia": [],
+    "skillIntro": "Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Coderwall profile so people can get more info there.",
     "skills": [
       {
         "id": 1,

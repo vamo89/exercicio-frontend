@@ -1,11 +1,11 @@
 <template>
-  <section class="project" :featured="featured" >
+  <section :featured="featured" >
     <div>{{ project.title }}</div>
     <div>{{ project.subtitle }}</div>
     <img :src="imgSrc" />
     <div>{{ project.description }}</div>
-    <a :href="url"><icon name="external-link-alt"/>Find out more</a>
-    <button :link="url"><icon name="regular/thumbs-up"/>Back My Project</button>
+    <a :href="project.url"><icon name="external-link-alt"/>Find out more</a>
+    <button :link="project.url"><icon name="regular/thumbs-up"/>Back My Project</button>
   </section>
 </template>
 
@@ -21,7 +21,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section.project:not([featured]) {
+@import '../../../assets/constants';
+
+section:not([featured]) {
   display: grid;
   justify-items: center;
 
@@ -34,7 +36,7 @@ section.project:not([featured]) {
   }
 }
 
-section.project[featured] a {
+section[featured] a {
   display: none;
 }
 </style>

@@ -3,16 +3,9 @@
     <ProfileHeader :data="profile"/>
     <main>
       <AboutMe :text="profile.aboutme"/>
-      <section id="projects">
-        Latest Projects
-        <ul>
-          <li v-for="(project, index) in projects" :key="project.id">
-            <Project :project="project" :featured="index === 0" />
-          </li>
-        </ul>
-      </section>
+      <Projects :projects="projects"/>
       <ContactInfo :info="profile"/>
-      <Skills :skills="profile.skills" />
+      <Skills :skills="profile.skills" :skillIntro="profile.skillIntro" />
     </main>
   </div>
 </template>
@@ -20,7 +13,7 @@
 <script>
 import ProfileHeader from './components/shared/profileHeader/ProfileHeader'
 import AboutMe from './components/shared/aboutMe/AboutMe'
-import Project from './components/shared/project/Project'
+import Projects from './components/shared/projects/Projects'
 import ContactInfo from './components/shared/contactInfo/ContactInfo'
 import Skills from './components/shared/skills/Skills'
 
@@ -28,7 +21,7 @@ export default {
   components: {
     ProfileHeader,
     AboutMe,
-    Project,
+    Projects,
     ContactInfo,
     Skills,
   },
@@ -65,5 +58,10 @@ export default {
 
 div#app {
   background-color: $app-background-color;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+  }
 }
 </style>

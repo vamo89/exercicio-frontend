@@ -53,7 +53,7 @@ header nav a figure {
   display: inline-block;
   position: relative;
 
-  background-color: $header-icon-color;
+  background-color: $icon-color;
   border-radius: 50%;
   height: 40px;
   width: 40px;
