@@ -58,6 +58,7 @@ export default {
 
 div#app {
   background-color: $app-background-color;
+  padding-bottom: 50px;
 
   main > * {
     margin: 50px 50px 0px 50px;

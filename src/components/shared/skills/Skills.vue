@@ -46,20 +46,29 @@ export default {
 
 section {
   background-color: $section-background-color;
+  padding: 20px;
 
   .title {
     color: $section-title-color;
     font: $section-title-font;
+    margin-bottom: 20px;
   }
 
   .text {
     color: $text-color;
     font: $text-font;
+    margin-bottom: 20px;
 
     white-space: pre-line;
   }
 
   .skill {
+    display: grid;
+    grid-template-areas:
+      "name level"
+      "bar bar";
+    margin-bottom: 20px;
+
     .name {
       color: $section-title-color;
       font: $skill-name-font;
@@ -70,11 +79,13 @@ section {
       font: $text-font;
 
       white-space: pre-line;
+      justify-self: right;
     }
 
     .bar {
       background-color: #ddd;
       height: 20px;
+      grid-area: bar;
 
       .bar-fill {
         display: block;
