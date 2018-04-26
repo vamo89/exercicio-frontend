@@ -26,7 +26,15 @@ export default {
 // Basic css
 section {
   display: grid;
-  justify-items: center;
+  padding: 20px 0px;
+
+  > * {
+    margin: 5px 0px;
+  }
+
+  img {
+    max-width: 100%;
+  }
 
   .text {
     color: $text-color;
@@ -45,6 +53,8 @@ section {
 
 // Only featured
 section.project[featured] {
+  justify-items: center;
+
   title {
     font: $project-title-featured-font;
   }
@@ -66,7 +76,8 @@ section.project[featured] {
 
 // Only non-featured
 section.project:not([featured]) {
-  border-top: 1px solid grey;
+  justify-items: left;
+  border-top: 1px solid #ccc;
 
   img {
     order: -1;
