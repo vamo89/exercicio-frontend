@@ -55,7 +55,7 @@ section {
 section.project[featured] {
   justify-items: center;
 
-  title {
+  .title {
     font: $project-title-featured-font;
   }
 
@@ -83,8 +83,43 @@ section.project:not([featured]) {
     order: -1;
   }
 
+  a {
+    padding-left: 10px;
+  }
+
   button {
     display: none;
   }
 }
+
+@media (min-width: $break-mobile) {
+  section.project:not([featured]) {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-areas:
+      "image title"
+      "image text"
+      "image link";
+
+    img {
+      grid-area: image;
+    }
+
+    .title {
+      grid-area: title;
+      padding-left: 10px;
+    }
+
+    .text {
+      grid-area: text;
+      padding-left: 10px;
+    }
+
+    a {
+      grid-area: link;
+      align-self: end;
+    }
+  }
+}
+
 </style>
