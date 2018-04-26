@@ -14,7 +14,7 @@ export default {
   props: ['project', 'featured'],
   computed: {
     imgSrc: function () {
-      return `/static/${this.project.picture}`
+      return `static/${this.project.picture}`
     }
   }
 }

@@ -21,7 +21,7 @@ export default {
   props: ['data'],
   computed: {
     imgSrc: function () {
-      return `/static/${this.data.picture}`
+      return `static/${this.data.picture}`
     }
   }
 }
